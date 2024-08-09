@@ -63,13 +63,13 @@ export default function ViewCreator() {
               </a>
             )}
             {creator.twitterHandle && (
-              <a href="XXXXXXXXXXXXXXXXXXX">
+              <a href={`https://twitter.com/${creator.twitterHandle}`}>
                 <ion-icon name="logo-twitter"></ion-icon> @
                 {creator.twitterHandle}
               </a>
             )}
             {creator.instagramHandle && (
-              <a href="XXXXXXXXXXXXXXXXXXXXX">
+              <a href={`https://instagram.com/${creator.instagramHandle}`}>
                 <ion-icon name="logo-instagram"></ion-icon> @
                 {creator.instagramHandle}
               </a>
