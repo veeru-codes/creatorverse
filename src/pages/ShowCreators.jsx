@@ -20,7 +20,7 @@ export default function ShowCreators() {
     };
 
     fetchCreators();
-  });
+  }, []);
 
   if (loading) {
     return (

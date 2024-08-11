@@ -11,13 +11,15 @@ import {
 import ShowCreators from "./pages/ShowCreators.jsx";
 import AddCreator from "./pages/AddCreator.jsx";
 import ViewCreator from "./pages/ViewCreator.jsx";
+import EditCreator from "./pages/EditCreator.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<ShowCreators />} />
       <Route path="new" element={<AddCreator />} />
-      <Route path="/creators/:id" element={<ViewCreator />} />
+      <Route path="creators/:id" element={<ViewCreator />} />
+      <Route path="creators/edit/:id" element={<EditCreator />} />
     </Route>
   )
 );

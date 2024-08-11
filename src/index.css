@@ -153,6 +153,7 @@ ion-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 100%;
   gap: 16px;
 }
@@ -202,6 +203,7 @@ ion-icon {
 .card-container .card-container__info ion-icon {
   font-size: 24px;
   margin-bottom: -4px;
+  text-transform: capitalize;
 }
 
 .card-container .card-container__info a {
@@ -210,7 +212,7 @@ ion-icon {
   display: flex;
   align-items: center;
   gap: 16px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   font-weight: bold;
   font-style: oblique;
 }
@@ -221,6 +223,7 @@ ion-icon {
 
 .card-container .card-container__info a:hover {
   transform: translateX(10px);
+  color: #ddd;
 }
 
 .card-container .card-container_btns {
@@ -242,17 +245,116 @@ ion-icon {
   transition: all 0.5s ease;
 }
 
-/* .card-container .card-container_btns .delete {
-  background-color: #aa544f;
-  color: #ddd;
-} */
+.card-container .card-container_btns .delete {
+  background-color: transparent;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}
 
 .card-container .card-container_btns .edit:hover {
-  background-color: #ddd;
-  color: var(--primary-color);
+  /* background-color: #ddd;
+  color: var(--primary-color); */
+  background-color: #3e567c;
+  color: #ddd;
 }
 
 .card-container .card-container_btns .delete:hover {
   background-color: #aa544f;
   color: #ddd;
+}
+
+/* ADD CREATOR STYLING */
+.form-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  color: var(--primary-color);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-container form .form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form label {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+
+.form-container form p {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.form-container form h2 {
+  margin-bottom: 8px;
+}
+
+.form-container form input,
+.form-container form textarea,
+.form-container button {
+  padding: 12px;
+  outline: none;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid var(--secondary-color);
+  font-family: "Assistant", sans-serif;
+  /* color: var(--secondary-color); */
+  font-weight: 300;
+}
+
+.form-container form input,
+.form-container form textarea {
+  border: 1px solid var(--secondary-color);
+}
+
+.form-container .submit,
+.form-container .delete {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  display: block;
+  width: 100%;
+}
+
+.form-container .submit {
+  border: 1px solid #3e567c;
+  background-color: #d2dee7;
+  color: #3e567c;
+  margin-bottom: 16px;
+}
+
+.form-container .submit:hover {
+  background-color: #3e567c;
+  color: #ddd;
+}
+
+.form-container .delete {
+  border: 1px solid #aa544f;
+  background-color: #dec5c4;
+  color: #aa544f;
+}
+
+.form-container .delete:hover {
+  background-color: #aa544f;
+  color: #ddd;
+}
+
+.form-container span {
+  margin-right: 12px;
+}
+
+.form-container span ion-icon {
+  margin-bottom: -3px;
 }

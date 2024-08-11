@@ -1,3 +1,4 @@
+import { createRef } from "react";
 import { Link } from "react-router-dom";
 
 export default function CreatorCard({ creator }) {
@@ -6,9 +7,7 @@ export default function CreatorCard({ creator }) {
       {/* Creator Image */}
       <div className="creator-card__img">
         <img
-          src={
-            creator.imageURL ? creator.imageURL : "./public/default-image.png"
-          }
+          src={creator.imageURL ? creator.imageURL : "/default-image.png"}
           alt="creator"
         />
       </div>
@@ -29,26 +28,41 @@ export default function CreatorCard({ creator }) {
       <div className="creator-card__links">
         <div className="creator-card__infoedit">
           {/* When clicked 'Info' button the page will be navigated to: '/creators/:id' */}
-          <Link to={`creators/${creator.id}`} className="info">
+          <Link to={`/creators/${creator.id}`} className="info">
             Info
           </Link>
 
-          <Link to="" className="edit">
+          {/* When clicked 'Edit' button the page will be navigated to: '/creators/edit/:id' */}
+          <Link to={`/creators/edit/${creator.id}`} className="edit">
             Edit
           </Link>
         </div>
 
-        {/* TODO: Based on the social media handles display the icons */}
         <div className="creator-card__social">
-          <a href="https://youtube.com">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-          <a href="https://twitter.com">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-          <a href="https://instagram.com">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
+          {creator.youtubeHandle && (
+            <a
+              href={`https://youtube.com/${creator.youtubeHandle}`}
+              target="_blank"
+            >
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          )}
+          {creator.twitterHandle && (
+            <a
+              href={`https://twitter.com/${creator.twitterHandle}`}
+              target="_blank"
+            >
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          )}
+          {creator.instagramHandle && (
+            <a
+              href={`https://instagram.com/${creator.instagramHandle}`}
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          )}
         </div>
       </div>
     </div>
