@@ -46,6 +46,10 @@ Describe any challenges encountered while building the app or any additional con
 
 - The major challenge I have faced was coming up with a new design and writing all the CSS on my own.
 
+## Live Demo
+
+View a live demo of the application by visiting: [creatorverse-production.vercel.app](https://creatorverse-production.vercel.app/)
+
 ## License
 
 Copyright 2024 Veerendranath P
