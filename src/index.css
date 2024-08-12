@@ -358,3 +358,70 @@ ion-icon {
 .form-container span ion-icon {
   margin-bottom: -3px;
 }
+
+/* MODAL STYLING */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.modal .modal-content p {
+  margin-bottom: 16px;
+}
+
+.modal .modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Cancel button */
+.modal .modal-content button:first-of-type {
+  border: 1px solid #3e567c;
+  background-color: #d2dee7;
+  color: #3e567c;
+  margin-right: 16px;
+}
+
+/* Delete button */
+.modal .modal-content button:last-of-type {
+  border: 1px solid #aa544f;
+  background-color: #dec5c4;
+  color: #aa544f;
+}
+
+.modal .modal-content button:first-of-type:hover {
+  background-color: #3e567c;
+  color: #ddd;
+}
+
+.modal .modal-content button:last-of-type:hover {
+  background-color: #aa544f;
+  color: #ddd;
+}

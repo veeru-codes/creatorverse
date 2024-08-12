@@ -114,7 +114,12 @@ export default function ViewCreator() {
               Edit
             </Link>
 
-            {/* FIXME: Update Links below */}
+            {/* Why didn't you used a Link component here?
+               The 'Link' component will still navigate to the specified route even if you include an 
+               'onClick' handler. This is because the 'Link' component is designed to handle navigation
+               But, it's generally recommended to keep navigation logic separate 
+               from other actions like deleting data. Consider using a separate button or component
+               to trigger the delete action, rather than coupling it to the 'Link' component.  */}
             <button className="delete" onClick={() => handleDelete(id)}>
               Delete
             </button>
